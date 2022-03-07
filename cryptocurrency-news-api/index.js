@@ -18,7 +18,6 @@ app.get('/news', (req, res) => {
         .then((response) => {
             const html = response.data
             
-            //use cheerio to manipulate the obtained website data 
             const $ = cheerio.load(html)
 
             $('.headline', html).each(function() {
